@@ -110,7 +110,7 @@ class CSULibrary(object):
             url = "http://libzw.csu.edu.cn/api.php/spaces/" + \
                 str(self.seatid[i])+"/book"
             headers = {
-                'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/1'
+                'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/28'
             }
             data = {
                 'access_token': access_token,
@@ -143,7 +143,7 @@ class CSULibrary(object):
         seat_id = str(self.getCurrentUse()['id'])
         url = "http://libzw.csu.edu.cn/api.php/profile/books/"+seat_id
         headers = {
-            'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/1',
+            'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/28',
         }
         data = {
             'id': seat_id,
@@ -173,7 +173,7 @@ class CSULibrary(object):
         seat_id = str(self.getCurrentUse()['id'])
         url = "http://libzw.csu.edu.cn/api.php/profile/books/"+seat_id
         headers = {
-            'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/1',
+            'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/28',
         }
         data = {
             'id': seat_id,
@@ -193,7 +193,7 @@ class CSULibrary(object):
         '''
         url = "http://libzw.csu.edu.cn/api.php/currentuse"
         headers = {
-            "Referer": "http://libzw.csu.edu.cn/home/web/seat/area/1"
+            "Referer": "http://libzw.csu.edu.cn/home/web/seat/area/28"
         }
         params = {
             "user": self.userid
@@ -212,7 +212,7 @@ class CSULibrary(object):
         '''
         url = "http://libzw.csu.edu.cn/api.php/v3areadays/"+str(self.area[i])
         headers = {
-            'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/1'
+            'Referer': 'http://libzw.csu.edu.cn/home/web/seat/area/28'
         }
         response = self.client.get(url, headers=headers)
         return response.json()["data"]["list"][0]["id"], response.json()["data"]["list"][1]["id"]

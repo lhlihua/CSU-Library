@@ -102,6 +102,8 @@ class CSULibrary(object):
         预约指定位置,返回结果消息
         '''
         self.login()
+        
+        print(self.client.cookies)
 
         access_token = requests.utils.dict_from_cookiejar(self.client.cookies)[
             'access_token']
@@ -137,6 +139,7 @@ class CSULibrary(object):
             os._exit(0)
 
         self.login()
+        
 
         access_token = requests.utils.dict_from_cookiejar(self.client.cookies)[
             'access_token']

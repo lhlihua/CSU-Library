@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '0/1 56/1 21 * * ? *'
+    - cron: '55/1 21 * * *'
 
 jobs:
   reserve:
